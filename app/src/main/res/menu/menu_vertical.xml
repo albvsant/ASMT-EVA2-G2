@@ -1,0 +1,9 @@
+<!-- res/menu/menu_vertical.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_datos"
+        android:title="Datos sensados" />
+    <item
+        android:id="@+id/menu_bateria"
+        android:title="Estado de Batería del Prototipo" />
+</menu>
