@@ -36,17 +36,18 @@ public class MainActivity extends AppCompatActivity {
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.menu_datos: // Cambia a R.id.menu_datos
-                        // Lógica para la opción 1
-                        Toast.makeText(MainActivity.this, "Opción 1 seleccionada", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.menu_bateria:
-                        // Lógica para la opción 2
-                        Toast.makeText(MainActivity.this, "Opción 2 seleccionada", Toast.LENGTH_SHORT).show();
-                        return true;
-                    default:
-                        return false;
+                int idItemMenu = item.getItemId();
+                if(idItemMenu ==R.id.menu_datos)
+                {
+                    Toast.makeText(MainActivity.this, "Datos sensados", Toast.LENGTH_SHORT).show();
+                    return true;
+                }else if(idItemMenu == R.id.menu_bateria)
+                {
+                    Toast.makeText(MainActivity.this, "Estado de Batería del Prototipo", Toast.LENGTH_SHORT).show();
+                    return true;
+                }else
+                {
+                    return false;
                 }
             }
         });
